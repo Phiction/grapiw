@@ -10,4 +10,14 @@ TODO
 
 Feed
 ---
-`unread_count` : add s4 `:account_id`, add `:status`  
+`unread_count` : add to individual feed
+
+Feed Entry
+---
+`mark as read`
+`starred`
+`like`
+
+Client
+---
+`tags`

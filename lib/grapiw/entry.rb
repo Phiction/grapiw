@@ -9,16 +9,16 @@ module Grapiw
     attr_reader :url
     attr_reader :id
     attr_reader :feed
-    attr_reader :session
+    attr_reader :client
     attr_reader :entry
     attr_reader :categories
     
-    def initialize(session=Session.new, feed=Feed.new, entry={})
+    def initialize(client=Client.new, feed=Feed.new, entry={})
       
       content = entry['content'] || entry['summary']
       content = content['content'] if content.is_a?(Hash)
       
-      @session    = session
+      @client     = client
       @feed       = feed
       @author     = entry['author']
       @content    = content

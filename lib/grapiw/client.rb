@@ -1,6 +1,6 @@
 module Grapiw
   
-  class Session
+  class Client
     include Utilities
     
     attr_reader(:auth)

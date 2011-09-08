@@ -11,8 +11,8 @@ module Grapiw
     options[:email]      = options[:email]      ||= Grapiw.email
     options[:password]   = options[:password]   ||= Grapiw.password
     
-    session = Grapiw::Session.new(options)
-    session if session.logged_in?
+    client = Grapiw::Client.new(options)
+    client if client.logged_in?
   end
   
 end

@@ -5,7 +5,7 @@ require("nokogiri")
 require("grapiw/version")
 require("grapiw/utilities")
 require("grapiw/entries")
-require("grapiw/session")
+require("grapiw/client")
 require("grapiw/feed")
 require("grapiw/entry")
 

@@ -6,11 +6,11 @@ module Grapiw
     attr_reader :title
     attr_reader :sortid
     attr_reader :id
-    attr_reader :session
+    attr_reader :client
     attr_reader :options
     
-    def initialize(session=Session.new, *args)
-      @session  = session
+    def initialize(client=Client.new, *args)
+      @client   = client
       options   = args.extract_options!
       @title    = options['title']
       @url      = options['id'].gsub("feed/","")
@@ -20,7 +20,7 @@ module Grapiw
     end
     
     def entries(options={})
-      @entries ||= Entries.fetch(@session, "stream/contents/#{id}", options)
+      @entries ||= Entries.fetch(@client, "stream/contents/#{id}", options)
     end
     
     

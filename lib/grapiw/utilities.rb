@@ -5,10 +5,10 @@ module Grapiw
     AUTH_URL = "https://www.google.com/accounts/ClientLogin"
     API_URL  = "http://www.google.com/reader/api/0/"
     
-    def build_call(session, url, method, options={})
+    def build_call(client, url, method, options={})
       options = convert_options(options).merge!('output' => 'json')
       url = API_URL + url
-      JSON.parse(RestClient.send(method, url, :params => options, :Authorization => "GoogleLogin auth=#{session.auth}"))
+      JSON.parse(RestClient.send(method, url, :params => options, :Authorization => "GoogleLogin auth=#{client.auth}"))
     end
     
   protected

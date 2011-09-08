@@ -1,4 +1,5 @@
 module Grapiw
+  
   class Session
     include Utilities
     
@@ -30,9 +31,14 @@ module Grapiw
     def client_name
       "grapiw-#{Grapiw.version}"
     end
-    ``
+    
     def feeds(options={})
       @feeds ||= build_call(self, "subscription/list", :get, options)['subscriptions'].map{|a| Feed.new(self, a)}
+    end
+    
+    def unread_count
+      @unread_count = build_call(self, "unread-count", :get, options)['unreadcounts']
+      Grapiw.log(@unread_count)
     end
     
     def expire!

@@ -37,8 +37,11 @@ module Grapiw
     end
     
     def unread_count
-      @unread_count = build_call(self, "unread-count", :get, options)['unreadcounts']
-      Grapiw.log(@unread_count)
+      @unread_count = build_call(self, "unread-count", :get, {})['unreadcounts']
+      @unread_count = @unread_count.blank? ? 0 : @unread_count.last['count']
+      
+      #Grapiw.log(@unread_count.inspect)
+      #@unread_count
     end
     
     def expire!

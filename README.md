@@ -14,9 +14,9 @@ Feed
 
 Feed Entry
 ---
-`mark as read`
-`starred`
-`like`
+`mark as read` 
+`starred` 
+`like` 
 
 Client
 ---

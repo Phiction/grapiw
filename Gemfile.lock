@@ -1,0 +1,34 @@
+PATH
+  remote: .
+  specs:
+    grapiw (0.0.1)
+      json (~> 1.5.3)
+      nokogiri (~> 1.4.4)
+      rest-client (~> 1.6)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    diff-lcs (1.1.2)
+    json (1.5.4)
+    mime-types (1.16)
+    mocha (0.9.12)
+    nokogiri (1.4.7)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.6.0)
+      rspec-core (~> 2.6.0)
+      rspec-expectations (~> 2.6.0)
+      rspec-mocks (~> 2.6.0)
+    rspec-core (2.6.4)
+    rspec-expectations (2.6.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  grapiw!
+  mocha (~> 0.9.12)
+  rspec (~> 2.6)
